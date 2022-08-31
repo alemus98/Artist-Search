@@ -1,11 +1,14 @@
 // Declare the global variables
 var submit = document.querySelector("#search-btn");
-var artistInput = document.querySelector("#input");
+
 
 function artistSearch() {
-  var queryString = "./search.html?q=" + ;
+  var artistInput = document.querySelector("#input").value;
   
-    // location.assign(queryString);
+
+  var queryString = "./search.html?q=" + artistInput;
+  
+  location.assign(queryString);
 }
 
 // add event listener to the search button

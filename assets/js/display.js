@@ -4,11 +4,12 @@ var artistInput = document.querySelector("#input");
 
 function getParams() {
   var searchParamsArr = document.location.search;
-  var query = searchParamsArr[0].split("=").pop();
+  var query = searchParamsArr.split("=").pop();
+  // console.log(query)
   artistSearch(query);
 }
 
-function artistSearch() {
+function artistSearch(query) {
   const options = {
     method: "GET",
     headers: {
@@ -16,13 +17,15 @@ function artistSearch() {
       "X-RapidAPI-Host": "youtube-music1.p.rapidapi.com",
     },
   };
+  console.log(query)
+  var ytUrl = "https://youtube-music1.p.rapidapi.com/v2/search?query=" + query;
 
-  fetch("https://youtube-music1.p.rapidapi.com/v2/search?query=", options)
+  fetch(ytUrl, options)
     .then((response) => response.json())
     .then((response) => console.log(response))
     .catch((err) => console.error(err));
-}
-artistSearch();
+};
+
 getParams();
 // add event listener to the search button
 
