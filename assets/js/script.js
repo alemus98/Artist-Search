@@ -1,20 +1,27 @@
 // Declare the global variables
 var submit = document.querySelector("#search-btn");
 
+$(function autoComp() {
+  var artistNames = JSON.parse(localStorage.getItem("artistLogList"));
+  $("#input").autocomplete({
+    source: artistNames,
+  });
+});
+
 function artistSearch() {
   var artistInput = document.querySelector("#input").value;
-  
+
   var queryString = "./search.html?q=" + artistInput;
 
   if (!artistInput) {
-    console.log("No artist logged.")
+    console.log("No artist logged.");
   } else {
     var recentSearches = {
-      userInput: artistInput
-    }
+      userInput: artistInput,
+    };
     console.log(recentSearches);
   }
-  var allSearches = localStorage.getItem('artistLogList');
+  var allSearches = localStorage.getItem("artistLogList");
   if (allSearches === null) {
     allSearches = [];
   } else {
@@ -23,8 +30,8 @@ function artistSearch() {
 
   allSearches.push(artistInput);
   var artistLog = JSON.stringify(allSearches);
-  localStorage.setItem('artistLogList', artistLog);
-  
+  localStorage.setItem("artistLogList", artistLog);
+
   location.assign(queryString);
 }
 
