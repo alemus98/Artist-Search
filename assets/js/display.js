@@ -4,6 +4,7 @@ var resultTextEl = document.querySelector('#result-text');
 
 
 
+
 function getParams() {
   var searchParamsArr = document.location.search;
   var query = searchParamsArr.split("=").pop();
@@ -26,14 +27,18 @@ function printShowResults(band) {
   var eventInfo = document.createElement('div');
   var ticketUrlEl = document.createElement('a');
 
+
   ticketUrlEl.setAttribute('href', band);
-  ticketUrlEl.classList.add('btn', 'btn-block', 'btn-danger', 'col-12', 'flex-column', 'd-flex', 'justify-content-center')
+  ticketUrlEl.setAttribute('target', '_blank')
+  ticketUrlEl.classList.add('btn', 'btn-block', 'btn-danger', 'justify-content-center') 
+  // 'col-12', 'flex-column', 'd-flex', 'justify-content-center')
   // eventInfo.classList.add('row', 'justify-content-center', 'text-decoration-none', 'text-center',);
   ticketUrlEl.textContent = "Get Tickets"
   // eventInfo.setAttribute('resultContentEl', ticketUrl);
   console.log(band);
   eventInfo.append(ticketUrlEl);
   resultContentEl.append(eventInfo);
+
 }
 
 function artistSearch(query) {
