@@ -1,15 +1,19 @@
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
-.header{
-    display: flex;
-    justify-content: center;
+.header {
+  display: flex;
+  justify-content: center;
+}
 
-}
 
 #photo {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    padding-top: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-top: 50px;
+  width: 60%;
+}
+#img2{
+  width: 60%;
 }
