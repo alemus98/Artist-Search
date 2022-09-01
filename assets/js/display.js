@@ -23,7 +23,7 @@ function printVideoResults(resultObj) {
 }
 
 function printShowResults(band) {
-  var resultContentEl = document.querySelector("#result-content");
+  var resultContentEl = document.querySelector("#ticketButton");
   var eventInfo = document.createElement('div');
   var ticketUrlEl = document.createElement('a');
 
