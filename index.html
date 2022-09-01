@@ -15,39 +15,61 @@
       rel="stylesheet"
       href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
     />
-    <link href="./assets/css/style.css">
+    <link href="./assets/css/style.css" />
   </head>
-  <body class="background bg-info">
-    <div class="container" >
-        <nav class="navbar navbar-expand-lg bg-light mt-5">
-            <div class="container">
-              <a class="navbar-brand" href="#">Home</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                  </li>
-                 
-                </ul>
-              </div>
-            </div>
-          </nav>
-          <div id="photo" style="text-align: center">
-             <img src="./assets/images/austin-neill-hgO1wFPXl3I-unsplash (1).jpg" alt="Man singing in concert" class="center mt-5" > </div>
-          <div id="search-container" class="row justify-content-center text-center mt-5 pt-5">
-          <div class="header"><h1>Search Your Favorite Artist</h1></div>
-         <div class="col-6 flex-column d-flex">
-            <input id="input" type="text"class="input-bar"></input>
-            <button id="search-btn" type="button" class="btn btn-primary btn-sm">Search</button>
-         </div>
+  <body background="./assets/images/IMG_0988 2.jpg" class="background bg-info">
+    <nav class="navbar sticky-top navbar-expand-lg bg-dark ">
+      <div class="container">
+        <a class="navbar-brand text-danger" href="#">Home</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link active navbar-brand text-danger"
+                aria-current="page"
+                href="#input"
+                >Search</a
+              >
+            </li>
+          </ul>
         </div>
+      </div>
+    </nav>
+    <div class="container flex-column d-flex align-items-center"">
+      
+      <div id="photo" style="text-align: center">
+        <img id="img2"
+          src="./assets/images/austin-neill-hgO1wFPXl3I-unsplash (1).jpg"
+          alt="Man singing in concert"
+          class="center mt-5"
+        />
+        <h1 class="bg-dark text-danger mt-5">Search Your Favorite Artist</h1>
+      </div>
+    
     </div>
+    <div
+    id="search-container"
+    class="row justify-content-center text-center mt-5 pt-5"
+  >
+    <div class="bg-dark header text-danger"></div>
+    <div class="col-6 flex-column d-flex">
+      <input id="input" type="text" class="input-bar" />
+      <button id="search-btn" type="button" class="btn btn-primary btn-sm">
+        Search
+      </button>
+    </div>
+  </div>
     <h1></h1>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
@@ -56,6 +78,6 @@
     ></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="./assets/js/script.js"></script>
-  </body>   
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
