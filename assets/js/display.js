@@ -2,6 +2,8 @@ var submit = document.querySelector("#search-btn");
 var artistInput = document.querySelector("#input");
 var resultTextEl = document.querySelector('#result-text');
 
+
+
 function getParams() {
   var searchParamsArr = document.location.search;
   var query = searchParamsArr.split("=").pop();
@@ -20,7 +22,18 @@ function printVideoResults(resultObj) {
 }
 
 function printShowResults(band) {
+  var resultContentEl = document.querySelector("#result-content");
+  var eventInfo = document.createElement('div');
+  var ticketUrlEl = document.createElement('a');
 
+  ticketUrlEl.setAttribute('href', band);
+  ticketUrlEl.classList.add('btn', 'btn-block', 'btn-danger', 'col-12', 'flex-column', 'd-flex', 'justify-content-center')
+  // eventInfo.classList.add('row', 'justify-content-center', 'text-decoration-none', 'text-center',);
+  ticketUrlEl.textContent = "Get Tickets"
+  // eventInfo.setAttribute('resultContentEl', ticketUrl);
+  console.log(band);
+  eventInfo.append(ticketUrlEl);
+  resultContentEl.append(eventInfo);
 }
 
 function artistSearch(query) {
@@ -44,15 +57,19 @@ function artistSearch(query) {
     
 };
 function showSearch(query) {
-  var url = "https://app.ticketmaster.com/discovery/v2/events.json?size=1&apikey=AV9mg9h1UJljjM1Ap3l1q17CLarnAboN&keyword=" + query;
+  var url = "https://app.ticketmaster.com/discovery/v2/events.json?size=5&apikey=AV9mg9h1UJljjM1Ap3l1q17CLarnAboN&keyword=" + query;
   fetch(url)
   .then((response) => response.json())
   .then(data => {
-    var eventUrl = "https://app.ticketmaster.com/discovery/v2/events/"+ data._embedded.events[0].id +"?size=1&apikey=AV9mg9h1UJljjM1Ap3l1q17CLarnAboN"
+    var eventUrl = "https://app.ticketmaster.com/discovery/v2/events/"+ data._embedded.events[0].id +"?size=5&sort=name,desc&apikey=AV9mg9h1UJljjM1Ap3l1q17CLarnAboN"
     console.log(data._embedded.events[0].id)
     fetch(eventUrl)
     .then((response2) => response2.json())
-    .then(data2 => console.log(data2))
+    .then(data2 => {
+      console.log(data2);
+      printShowResults(data2.url);
+    })
+    
   })
 }
 
