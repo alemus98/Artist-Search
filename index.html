@@ -13,15 +13,25 @@
     />
     <link
       rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap" rel="stylesheet">
+
+    <link
+      rel="stylesheet"
       href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
     />
-    <link href="./assets/css/style.css" />
+    <link href="./assets/css/style.css" rel="stylesheet"/>
   </head>
   <body background="./assets/images/IMG_0988 2.jpg" class="background bg-info">
-    <nav class="navbar sticky-top navbar-expand-lg bg-dark ">
-      <div class="container">
-        <a class="navbar-brand text-danger" href="#">Home</a>
-        <button
+    <nav class="navbar sticky-top navbar-expand-lg bg-dark">
+      <div class="container-fluid justify-content-start position-relative">
+        <a class="navbar-brand text-danger ms-4" href="#"><i class="fas fa-headphones-alt"></i></a>
+        <!-- <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
@@ -43,18 +53,23 @@
               >
             </li>
           </ul>
+        </div> -->
+        <div class="d-flex position-absolute start-50 translate-middle-x" role="search">
+          <input id="input" class="form-control me-3" type="search" placeholder="Search for artist..." aria-label="Search">
+          <button id="search-btn" class="btn btn-outline-danger" type="submit">Search</button>
         </div>
       </div>
     </nav>
-    <div class="container flex-column d-flex align-items-center"">
+    <div id="paragraph" class="container flex-column d-flex align-items-center bg-dark vw-100 rounded-2">
       
-      <div id="photo" style="text-align: center">
-        <img id="img2"
+      <div id="photo" class="text-danger fs-1" style="text-align: center">
+        <p>Search your Favorite artist and find their next show!</p>
+        <!-- <img id="img2"
           src="./assets/images/austin-neill-hgO1wFPXl3I-unsplash (1).jpg"
           alt="Man singing in concert"
           class="center mt-5"
-        />
-        <h1 class="bg-dark text-danger mt-5">Search Your Favorite Artist</h1>
+        /> -->
+        <!-- <h1 class="bg-dark text-danger mt-5">Search Your Favorite Artist</h1> -->
       </div>
     
     </div>
@@ -64,10 +79,10 @@
   >
     <div class="bg-dark header text-danger"></div>
     <div class="col-6 flex-column d-flex">
-      <input id="input" type="text" class="input-bar" />
+      <!-- <input id="input" type="text" class="input-bar" />
       <button id="search-btn" type="button" class="btn btn-primary btn-sm">
         Search
-      </button>
+      </button> -->
     </div>
   </div>
     <h1></h1>
