@@ -1,27 +1,26 @@
+/* Global Selectors */
 * {
   padding: 0;
   margin: 0;
 }
+
+/* Element Selectors */
 body {
-  font-family: 'Montserrat', sans-serif;
- 
+  font-family: 'Lora', serif;
 }
 
+/* Class Selectors */
 .header {
   display: flex;
   justify-content: center;
 }
 
-
+/* ID Selectors */
 #photo {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 115px;
   padding-top: 50px;
   width: 60%;
 }
 #img2{
   width: 60%;
-}
-#paragraph {
-  margin-top: 260px;
 }

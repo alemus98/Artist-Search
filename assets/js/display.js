@@ -1,10 +1,4 @@
-var submit = document.querySelector("#search-btn");
-var artistInput = document.querySelector("#input");
-var resultTextEl = document.querySelector('#result-text');
-
-
-
-
+// Functions to obtain search parameters
 function getParams() {
   var searchParamsArr = document.location.search;
   var query = searchParamsArr.split("=").pop();
@@ -13,6 +7,7 @@ function getParams() {
   showSearch(query);
 }
 
+// Function to display Youtube video of artist searched
 function printVideoResults(resultObj) {
   var randomIndex = Math.floor(Math.random()*resultObj.length);
   console.log(resultObj[randomIndex]);
@@ -22,25 +17,23 @@ function printVideoResults(resultObj) {
   youtubeEl.setAttribute("src", youtubeUrl);
 }
 
+// Function to create button to re-direct to ticketing site
 function printShowResults(band) {
   var resultContentEl = document.querySelector("#ticketButton");
   var eventInfo = document.createElement('div');
   var ticketUrlEl = document.createElement('a');
 
-
   ticketUrlEl.setAttribute('href', band);
-  ticketUrlEl.setAttribute('target', '_blank')
-  ticketUrlEl.classList.add('btn', 'btn-block', 'btn-danger', 'justify-content-center') 
-  // 'col-12', 'flex-column', 'd-flex', 'justify-content-center')
-  // eventInfo.classList.add('row', 'justify-content-center', 'text-decoration-none', 'text-center',);
+  ticketUrlEl.setAttribute('target', '_blank');
+  ticketUrlEl.classList.add('btn', 'btn-lg', 'btn-dark', 'justify-content-center', 'fw-bold', 'text-danger', 'border', 'border-light');
   ticketUrlEl.textContent = "Get Tickets"
-  // eventInfo.setAttribute('resultContentEl', ticketUrl);
   console.log(band);
   eventInfo.append(ticketUrlEl);
   resultContentEl.append(eventInfo);
 
 }
 
+// API to fetch Youtube video of artist
 function artistSearch(query) {
   const options = {
     method: "GET",
@@ -61,6 +54,8 @@ function artistSearch(query) {
 
     
 };
+
+// API to fetch Ticketmaster/affiliates ticketing info
 function showSearch(query) {
   var url = "https://app.ticketmaster.com/discovery/v2/events.json?size=5&apikey=AV9mg9h1UJljjM1Ap3l1q17CLarnAboN&keyword=" + query;
   fetch(url)
@@ -74,10 +69,8 @@ function showSearch(query) {
       console.log(data2);
       printShowResults(data2.url);
     })
-    
   })
 }
 
+// Calling function
 getParams();
-// add event listener to the search button
-
