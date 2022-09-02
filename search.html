@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Activity Playlist</title>
+    <title>Artist Search</title>
+    <!-- Links for Bootstrap, fonts and CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -20,42 +21,26 @@
     <link href="./assets/css/style.css" />
   </head>
   <body background="./assets/images/IMG_0988 2.jpg">
+
+    <!-- Navbar w/back anchor -->
     <nav class="navbar navbar-expand-lg bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand text-danger ms-3" href="./index.html">Back</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <!-- <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-          </ul> -->
-        </div>
+        <a class="navbar-brand text-danger fw-bold ms-3" href="./index.html">Back</a>
+       
       </div>
     </nav>
+
+    <!-- Container w/video of artist -->
     <div class="container">
       <div
         id="search-container"
         class="row justify-content-center text-center mt-5 pt-5"
       >
-        <!-- <div class="header"><h1>Search Your Favorite Artist</h1></div> -->
+       
         <div class="col-6 flex-column d-flex">
-          <!-- <input id="input" class="input-bar "></input> -->
+          
           <div class="col-12 col-md-9 p-3 text-dark">
-            <!-- <h2>Showing results for <span id="result-text"></span></h2> -->
+            
             <div id="result-content">
               <iframe
                 width="560"
@@ -69,15 +54,15 @@
               ></iframe>
             </div>
           </div>
+          <!-- Div to create button to lead to ticketing site, made in JS -->
           <div id="ticketButton">
-            <!-- <a href="./index.html" class="btn btn-block btn-danger"
-            >&larr; Go back.</a
-          > -->
+          
           </div>
         </div>
       </div>
     </div>
-    <h1></h1>
+
+    <!-- Scripts for JS and Bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"

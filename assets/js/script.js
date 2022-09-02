@@ -1,6 +1,7 @@
 // Declare the global variables
 var submit = document.querySelector("#search-btn");
 
+// JQuery UI autocomplete
 $(function autoComp() {
   var artistNames = JSON.parse(localStorage.getItem("artistLogList"));
   $("#input").autocomplete({
@@ -8,9 +9,8 @@ $(function autoComp() {
   });
 });
 
+// Function to log artist's searched into local storage and pull for autocomplete
 function artistSearch() {
-  // event.preventDefault();
-
   var artistInput = document.querySelector("#input").value;
 
   var queryString = "./search.html?q=" + artistInput;
@@ -39,5 +39,3 @@ function artistSearch() {
 
 // add event listener to the search button
 submit.addEventListener("click", artistSearch);
-// need to link the apis to the search button and input screen
-// track artist searched into local storage
