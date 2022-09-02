@@ -9,6 +9,8 @@ $(function autoComp() {
 });
 
 function artistSearch() {
+  // event.preventDefault();
+
   var artistInput = document.querySelector("#input").value;
 
   var queryString = "./search.html?q=" + artistInput;
