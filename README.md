@@ -4,7 +4,11 @@
 
 Our first group project utilizing HTML, CSS, JavaScript, JQuery, BootStrap, Third-Party and Server Side API's, Client Side Storage, and Google Fonts.  This application allows users to search up their favorite artists to find their next upcoming concert along with a music video from the artists discography.  If the user would like to purchase tickets for the concert, they will be re-directed to Ticketmaster and/or their affiliates.
 
-## Live Link
+## Links
+
+Live Link:  https://alemus98.github.io/Activity-Playlist/
+
+Repo:  https://github.com/alemus98/Activity-Playlist
 
 ## Images
 
