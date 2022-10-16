@@ -6,9 +6,9 @@ Our first group project utilizing HTML, CSS, JavaScript, JQuery, BootStrap, Thir
 
 ## Links
 
-Live Link:  https://alemus98.github.io/Activity-Playlist/
+Live Link:  https://alemus98.github.io/Artist-Search/
 
-Repo:  https://github.com/alemus98/Activity-Playlist
+Repo:  https://github.com/alemus98/Artist-Search
 
 ## Images
 
